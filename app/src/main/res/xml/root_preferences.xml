@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- ===== SUBPANTALLA: BASIC FORMAT ===== -->
+    <PreferenceScreen
+        app:key="basic_screen"
+        app:title="Basic Format"
+        app:iconSpaceReserved="false">
+
+        <ListPreference
+            app:key="pref_size"
+            app:title="Size"
+            app:entries="@array/size_entries"
+            app:entryValues="@array/size_values"
+            app:defaultValue="18"
+            app:useSimpleSummaryProvider="true"
+            app:iconSpaceReserved="false" />
+
+        <ListPreference
+            app:key="pref_fg_color"
+            app:title="FG color"
+            app:entries="@array/color_names"
+            app:entryValues="@array/color_values"
+            app:defaultValue="#FF800080"
+            app:useSimpleSummaryProvider="true"
+            app:iconSpaceReserved="false" />
+
+        <ListPreference
+            app:key="pref_bg_color"
+            app:title="BG color"
+            app:entries="@array/color_names"
+            app:entryValues="@array/color_values"
+            app:defaultValue="#FF888888"
+            app:useSimpleSummaryProvider="true"
+            app:iconSpaceReserved="false" />
+
+        <SwitchPreferenceCompat
+            app:key="pref_bold"
+            app:title="Bold"
+            app:defaultValue="false"
+            app:iconSpaceReserved="false" />
+
+        <CheckBoxPreference
+            app:key="pref_italic"
+            app:title="Italic"
+            app:defaultValue="false"
+            app:iconSpaceReserved="false" />
+
+    </PreferenceScreen>
+
+    <!-- ===== SUBPANTALLA: ADVANCED FORMAT ===== -->
+    <PreferenceScreen
+        app:key="advanced_screen"
+        app:title="Advanced Format"
+        app:iconSpaceReserved="false">
+
+        <SeekBarPreference
+            app:key="pref_alpha_pct"
+            app:title="Alpha"
+            android:min="0"
+            android:max="100"
+            app:defaultValue="60"
+            app:showSeekBarValue="true"
+            app:iconSpaceReserved="false" />
+
+        <SeekBarPreference
+            app:key="pref_rotation"
+            app:title="Rotation"
+            android:min="0"
+            android:max="360"
+            app:defaultValue="0"
+            app:showSeekBarValue="true"
+            app:iconSpaceReserved="false" />
+
+    </PreferenceScreen>
+
+</PreferenceScreen>
